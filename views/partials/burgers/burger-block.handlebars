@@ -1,11 +1,19 @@
-<p> 
+<p>
 	{{#unless devoured}}
-		<i class="devour-burger " data-id="{{this.id}}"></i>
+	<i class="devour-burger " data-id="{{this.id}}"></i>
 	{{/unless}}
 
 	<i class="delete-burger " data-id="{{this.id}}"></i>
+
+	{{#unless devoured}}
+		
+		<button class="devour btn btn-info" data-id="{{this.id}}">{{burger_name}}</button>
+		<input class="customerName" placeholder="Who is eating this burger?"> 
+	{{/unless}} 
 	
-	{{#unless devoured}} <button class="devour btn btn-info" data-id="{{this.id}}">{{burger_name}}</button>{{/unless}}
-	{{#if devoured}} <button class="eaten btn btn-danger">{{burger_name}}</button>{{/if}}
 	
+	{{#if devoured}}
+		<button class="eaten btn btn-danger">{{burger_name}}</button>
+	{{/if}}
+
 </p>
