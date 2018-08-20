@@ -16,11 +16,16 @@
         }).then(
             
             function() {
-                alert("devoured burger!", id);
+                alert("Munch Munch Munch. Burger was eaten!", id);
                 location.reload();   
             }
         );
     });
+
+    $(".eaten").on("click", function() {
+        alert("You already ate that burger! Try another one.")
+    });
+
 
     $(".create-form").on("submit", function(event) {
         event.preventDefault();
